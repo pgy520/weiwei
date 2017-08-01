@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">-->
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/shopping.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery-lazyload/jquery.lazyload.js"></script>
+    <!--<script src="js/jquery-3.2.1.js"></script>-->
+    <!--<script src="lib/bootstrap/js/bootstrap.js"></script>-->
+
+    <script src="js/Troke.MyCookie.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/shopping.js"></script>
+
+
+
+</head>
+<body>
+<div class="header-wrp">
+    <div class="header">
+        <div class="address">
+            <div class="top"> 送至:北京<span><i class="iconfont">&#xe601;</i></span></div>
+            <div class="bottom">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="menu">
+            <span class="welcome">您好，欢迎来到 为为商城</span><a href="loading.html" title="点击登录或者切换用户" class="loading">请登录</a>
+            <a href="register.html" class="register" title="点击注册用户">免费注册</a>
+            <ul>
+                <li class="myorder sele animate">
+                    <a href="#">我的订单<span><i class="iconfont">&#xe601;</i></span></a>
+                    <ul>
+                        <li><a href="">待付款订单</a></li>
+                        <li><a href="">待确认收货</a></li>
+                        <li><a href="">待平价交易</a></li>
+                    </ul>
+                </li>
+                <li class="businesscenter sele animate">
+                    <a href="#">商家中心<span><i class="iconfont">&#xe601;</i></span></a>
+                    <ul>
+                        <li><a href="#">申请入驻</a></li>
+                        <li><a href="#">我的店铺</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="iconfont">&#xe602;</i>手机为为</a>
+                </li>
+                <li class="service sele animate">
+                    <a href="#">客户服务<span><i class="iconfont">&#xe601;</i></span></a>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">售后服务</a></li>
+                        <li><a href="#">客服中心</a></li>
+                    </ul>
+                </li>
+                <li  class="attention animate">
+                    <a href="#"><i class="iconfont">&#xe606;</i>关注我们<span><i class="iconfont">&#xe601;</i></span></a>
+                    <ul>
+                        <li>扫描二维码<br>关注商城微信号</li>
+                        <li><img src="images/weixin.gif" alt=""></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!--搜索-->
+<div class="searchwrp">
+    <div class="search-wrp">
+        <div class="searchtop">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="search">
+                <div class="top">
+                    <div class="formtable">
+                        <form id="myform">
+                            <input type="text" placeholder="请输入你需要搜索的商品关键字">
+                            <input type="submit" value="搜索" class="sub">
+                        </form>
+                    </div>
+                    <div href="#" class="sect">
+                        <a href="#">商品<i class="iconfont"></i></a>
+                        <ul>
+                            <li><a href="">商品</a></li>
+                            <li><a href="">店铺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" style="color: orange">沙发&nbsp;&nbsp;</a>
+                <a href="#">床&nbsp;&nbsp;</a>
+                <a href="#">瓷砖&nbsp;&nbsp;</a>
+                <a href="#" style="color: orange">地板&nbsp;&nbsp;</a>
+                <a href="#">餐桌</a>
+            </div>
+            <div class="shopping">
+                <div class="bar">
+                    <a href="#"><i class="iconfont">&#xe609;</i>我的购物车<span><i class="iconfont">&#xe71a;</i></span></a>
+                    <span class="number status_number">1</span>
+                </div>
+                <div class="spbox">
+                    <h5>最近加入的商品</h5>
+                    <div class="center">
+                        <div class="empty">您的购物车空空如也!</div>
+                        <ul class="gouwuche_box">
+                            <!--<li>-->
+                                <!--<a href="javascript:;"><img src="images/brand01.jpg" alt=""></a>-->
+                                <!--<a href="javascript:;">致尚名门 镶嵌工艺玻璃-风景香槟砂金单边套推拉中空铝门 Z-1366 平方米</a>-->
+                                <!--<span>¥2080.00</span>-->
+                                <!--<a href="javascript:;" onclick='del(this)'>删除</a>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                    <div class="bottom">
+                        <span>共<span class="gouwukinds">1</span>种商品  总计金额：<span class="countmoney">¥2080.00</span></span><br>
+                        <a href="javascript:;" class="go-to-carhtml">结算购物车中的产品</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="searchbottom">
+            <div  class="band">
+                <i class="iconfont" style="color:white">&#xe60c;</i><a href="#">精选商品分类</a>
+                <div class="menu band_menu_list">
+                    <dl>
+                        <dt><a href="#">建材</a></dt>
+                        <dd>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">家居家纺</a></dt>
+                        <dd>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">装修服务</a></dt>
+                        <dd>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li class="menulist">
+                    <a href="">建材</a>
+                    <div class="list">
+                        <div class="listleft">
+                            <dl>
+                                <dt>基础建材</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">开关插件</a>
+                                    <a href="">油漆涂料</a>
+                                    <a href="">电线</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>橱柜</dt>
+                                <dd>
+                                    <a href="">整体橱柜</a>
+                                    <a href="">柜体</a>
+                                    <a href="">门板</a>
+                                    <a href="">台面</a>
+                                    <a href="">橱柜配件</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>移门衣柜</dt>
+                                <dd>
+                                    <a href="">衣柜移门</a>
+                                    <a href="">整体衣柜</a>
+                                    <a href="">折叠门</a>
+                                    <a href="">隔断衣柜</a>
+                                    <a href="">定制柜类</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>净水器/水处理</dt>
+                                <dd>
+                                    <a href="">净水器/水处理</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="listcenter">
+                            <dl>
+                                <dt>基础建材</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它</a>
+
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>橱柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>移门衣柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>净水器/水处理</dt>
+                                <dd>
+                                    <a href="">净水器</a>
+                                    <a href="">净水器/水处理</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="listright">
+                            <dl>
+                                <dt>基础建材</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>橱柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>移门衣柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>净水器/水处理</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>净水器/水处理</dt>
+                                <dd>
+                                    <a href="">净水器/水处理</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </li>
+                <li  class="menulist">
+                    <a href="">家居私房</a>
+                    <div class="list">
+                        <div class="listleft bdnone">
+                            <dl>
+                                <dt>基础建材</dt>
+                                <dd>
+                                    <a href="">其</a>
+                                    <a href="">其它</a>
+                                    <a href="">其它辅</a>
+                                    <a href="">其它</a>
+                                    <a href="">其它</a>
+                                    <a href="">其它辅/辅料</a>
+                                    <a href="">其它辅/它辅料</a>
+                                    <a href="">其它辅</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>橱柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>移门衣柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+
+                        </div>
+                        <div class="listcenter bdnone">
+                            <dl>
+                                <dt>基础建材</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它</a>
+
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>橱柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>移门衣柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">净水器</a>
+                                    <a href="">净水器/水处理</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="listright bdadd">
+                            <dl>
+                                <dt>基础建材</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>橱柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                    <a href="">辅料</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>移门衣柜</dt>
+                                <dd>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅料</a>
+                                    <a href="">其它辅</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">品牌</a></li>
+                <li><a href="">店铺</a></li>
+                <li><a href="">装修攻略</a></li>
+                <li><a href="">装修图库</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--商品详情和购物车-->
+
+<div id="shopping_wrp">
+    <div id="shopping">
+        <div id="shopping_top">
+            <p>
+                <a href="index.html">首页</a>>
+                <a href="#">建材</a>>
+                <a href="#">橱柜</a>>
+                <a href="#">整体橱柜</a>>
+                <span class="proname"></span>
+            </p>
+            <div class="shoppingbox">
+                <div class="leftARE">
+                    <div class="smallImg">
+                        <div class="smallArea"></div>
+                    </div>
+
+                    <div class="bigArea">
+                        <img src="" alt="" class="bigImg proimg">
+                    </div>
+
+                    <div class="img_switch">
+                        <div>
+                            <a href="javascript:;" class="prev"><</a>
+                            <ul>
+                                <li class="litterimg"></li>
+                            </ul>
+                            <a href="javascript:;" class="prev">></a>
+                        </div>
+                        <a href="#">收藏商品(0)</a>
+                        <a href="#">举报</a>
+                    </div>
+
+                </div>
+                <div class="center">
+                    <h3 class="proname"></h3>
+                    <p>尺寸可定制 上海地区满金额包邮 预定前请先与卖家确认送货地址调整运费</p>
+                    <div>
+                        <p>市场价:&nbsp;&nbsp;<span class="oldproprice"></span></p>
+                        <p>商城价:&nbsp;&nbsp;<span class="proprice"></span></p>
+                        <a href="#">商品评分</a>
+                        <span></span>
+                    </div>
+                    <div>
+                        <span>购买数量</span>
+                        <input type="text" value="1" class="carnumber">
+                        <button type="button" class="increase">+</button>
+                        <button type="button" class="decrease">-</button>
+                    </div>
+                    <input type="button" class="spbtn" value="立即购买">
+                    <input type="button" class="iconfont addcart" value="&#xe609;添加到购物车">
+                    <div class="shopping-status">
+                        <p>成功添加到购物车</p>
+                        <p>购物车共有<span class="kinds"></span>种商品&nbsp;总金额为:<span class="count-money" style="color:orange;font-size: 14px"></span></p>
+                        <div>
+                            <a href="car.html">查看购物车</a>
+                            <a href="javascript:;">继续购物</a>
+                        </div>
+                        <a href="javascript:;" class="close">X</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3><span class="prostore"></span>为为旗舰店</h3>
+                    <div>
+                        综合评分:<span></span><span>5</span>分
+                    </div>
+                    <div>
+                        <span>店铺动态评分</span>
+                        <span>与行业相比</span>
+                        <p>
+                            <span>描述相符5 分</span>
+                            <span class="orbk"></span>
+                            <span class="orcolor">持平</span>
+                            <span class="orbig">----</span>
+                        </p>
+                        <p>
+                            <span>描述相符5 分</span>
+                            <span class="orbk"></span>
+                            <span class="orcolor">持平</span>
+                            <span class="orbig">----</span>
+                        </p>
+                        <p>
+                            <span>描述相符5 分</span>
+                            <span class="orbk"></span>
+                            <span class="orcolor">持平</span>
+                            <span class="orbig">----</span>
+                        </p>
+                    </div>
+                    <div>
+                        联系方式:<a href="#"><img src="image_shopping/img1/qq-pic.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <p>联系电话： 021-56452106</p>
+                        <p>
+                            <a href="#">进入商家店铺</a>
+                            <a href="#">收藏店铺</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="shopping_bottom">
+            <div id="shopping-left">
+                <div class="default">
+                    <h3><span class="prostore"></span>为为旗舰店</h3>
+                    <a href="#"><img src="image_shopping/img1/qq-pic.jpg" alt=""></a>
+                </div>
+                <div class="golds-kind">
+                    <h3>商品分类</h3>
+                    <p>
+                        <a href="#">按新品</a>
+                        <a href="#">按价格</a>
+                        <a href="#">按销量</a>
+                        <a href="#">按人气</a>
+                    </p>
+                    <form>
+                        <input type="text" placeholder="搜索店内的商品">
+                        <input type="button" value="搜索">
+                    </form>
+                    <p><a href="#">全部商品</a></p>
+                </div>
+                <div class="gold-list">
+                    <div class="title">
+                        <h4>商品排行</h4>
+                    </div>
+                    <div class="content">
+                        <ul class="ncs-top-tab pngFix">
+                            <li id="hot_sales_tab" class="current"><a href="#">热销商品排行</a></li>
+                            <li id="hot_collect_tab" class=""><a href="#">热门收藏排行</a></li>
+                        </ul>
+                        <div id="hot_sales_list" class="ncs-top-panel">
+                            <ol>
+                                <li>
+                                    <div class="list_left"><img class="listhot" src="image_shopping/img1/listhot01.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 榻榻米 白色 平方</a>
+                                        <p>198.00</p>
+                                        <p>售出：<strong>8</strong>笔</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_left"><img class="listhot" src="image_shopping/img1/listhot02.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 德国雷诺丽特模压橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>2380.00</p>
+                                        <p>售出：<strong>0</strong>笔</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_left"><img class="listhot" src="image_shopping/img1/listhot03.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 钢琴烤漆橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>1980.00</p>
+                                        <p>售出：<strong>0</strong>笔</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_left"><img class="listhot" src="image_shopping/img1/listhot04.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 韩国LG模压橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>1980.00</p>
+                                        <p>售出：<strong>0</strong>笔</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_left"><img class="listhot" src="image_shopping/img1/listhot05.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 金属烤漆橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>2080.00</p>
+                                        <p>售出：<strong>0</strong>笔</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div id="hot_collect_list" class="ncs-top-panel hide" >
+                            <ol>
+                                <li>
+                                    <div class="list_left"><img class="listsave" src="image_shopping/img1/listsave01.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 金属烤漆橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>2380.00</p>
+                                        <p>收藏人气：<strong>8</strong></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_left"><img class="listsave" src="image_shopping/img1/listsave02.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 德国雷诺丽特模压橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>2380.00</p>
+                                        <p>收藏人气：<strong>0</strong>笔</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_left"><img class="listsave" src="image_shopping/img1/listsave03.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 钢琴烤漆橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>2080.00</p>
+                                        <p>收藏人气：<strong>1</strong></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_left"><img class="listsave" src="image_shopping/img1/listsave04.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 韩国LG模压橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>1980.00</p>
+                                        <p>收藏人气：<strong>0</strong></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_left"><img class="listsave" src="image_shopping/img1/listsave05.jpg" alt=""></div>
+                                    <div class="list_right">
+                                        <a href="#"><span class="prostore"></span> 进口爱格板双饰面橱柜 下柜+台面+1/2上柜 延米</a>
+                                        <p>2080.00</p>
+                                        <p>收藏人气：<strong>0</strong>笔</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <p><a href="#">查看本店其他商品</a></p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="shopping-right">
+                <div class="fixed-nav">
+                    <div id="shopping-right-top">
+                    <ul class="switch changelistshow">
+                        <li><a href="javascript:;" class="current">商品详情</a></li>
+                        <li><a href="javascript:;">商品评价(0)</a></li>
+                        <li><a href="javascript:;">销售记录(0)</a></li>
+                        <li><a href="javascript:;">购买咨询</a></li>
+                    </ul>
+                    </div>
+                </div>
+
+                <div id="shopping-right-bottom">
+                    <div>
+                        <span>商家货号：</span>
+                        <span>品牌：<span class="prostore"></span></span>
+                    </div>
+                    <div class="bar_bg">
+
+                    </div>
+                    <div class="img-show prolazy">
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow01.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow02.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow03.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow04.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow05.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow06.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow07.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow08.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow09.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow10.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow11.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow12.jpg" alt="BMW M1 Hood">-->
+                        <!--<img class="lazy123" data-original="image_shopping/img1/imgshow13.jpg" alt="BMW M1 Hood">-->
+                    </div>
+                    <div class="band-pjia">
+                        <p>商品评价</p>
+                        <div>
+                            <div class="left">
+                                <span>100%</span><span>好评</span>
+                                <p>共有0人参与评分</p>
+                            </div>
+                            <div class="right">
+                                好评(100%)<span></span>
+                                中评(0%)<span></span>
+                                差评(0%)<span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="band-pjia-info">
+                        <ul class="switch">
+                            <li><a href="javascript:;" class="current">商品评价(0)</a></li>
+                            <li><a href="javascript:;">好评(0)</a></li>
+                            <li><a href="javascript:;">中评(0)</a></li>
+                            <li><a href="javascript:;">差评(0)</a></li>
+                        </ul>
+                        <div class="info">暂无符合条件的数据记录</div>
+                    </div>
+                    <div class="sales-info">
+                        <p>销售记录</p>
+                        <div class="info">暂无符合条件的数据记录</div>
+                    </div>
+                    <div class="shopping-question">
+                        <div>
+                            <p>购买咨询</p>
+                            <div>
+                                <span></span>
+                                <p>因厂家更改商品包装、场地、附配件等不做提前通知，且每位咨询者购买、提问时间等不同。为此，客服给到的回复仅对提问者3天内有效，其他网友仅供参考！给您带来的不变还请谅解，谢谢！</p>
+                                <a href="#">我要提问</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--底部-->
+<div id="footer-wrp">
+    <div class="footer">
+        <div class="footer-center">
+            <div class="footer-c-left">
+                <h3>客服在线</h3>
+                <img src="images/tel.png" alt="">
+                <span>021-56457299</span>
+                <span>周一到周五9:00-17:30</span>
+            </div>
+            <div class="footer-c-center">
+                <ul>
+                    <li>
+                        <h3>帮助中心</h3>
+                        <p><a href="#">忘记密码</a></p>
+                        <p><a href="#">积分兑换说明</a></p>
+                        <p><a href="#">积分细则</a></p>
+                    </li>
+                    <li>
+                        <h3>店长之家</h3>
+                        <p><a href="#">如何申请开店</a></p>
+                    </li>
+                    <li>
+                        <h3>支付方式</h3>
+                        <p><a href="#">在线支付</a></p>
+                    </li>
+                    <li>
+                        <h3>售后服务</h3>
+                        <p><a href="#">退换货政策</a></p>
+                        <p><a href="#">退款申请</a></p>
+                        <p><a href="#">退换货流程</a></p>
+                    </li>
+                    <li>
+                        <h3>客服中心</h3>
+                        <p><a href="#">会员修改密码</a></p>
+                        <p><a href="#">会员修改个人资料</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-c-right">
+                <span>为为网APP</span>
+                <span>为为网微信</span>
+                <img src="images/v.png" alt="">
+                <img src="images/weiwei.png" alt="">
+                <span>下载移动客户端</span>
+                <span>为为网官方微信</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <a href="#">首页&nbsp;&nbsp;</a>|
+                <a href="#">招聘英才&nbsp;</a>|
+                <a href="#">合作及洽谈&nbsp;</a>|
+                <a href="#">联系我们&nbsp;&nbsp;</a>|
+                <a href="#">关于我们&nbsp;&nbsp;</a>|
+                <a href="#">友情链接&nbsp;&nbsp;</a>
+            </p>
+            <p>Copyright 2015 沪ICP备08001311号 | 营业执照</p>
+        </div>
+    </div>
+</div>
+
+
+<div id="sidebar">
+    <div class="side-top">
+        <div class="side-login-box">
+            <img src="images/login.gif" width="30" height="30" style="border-radius: 50%" alt="">
+            <a href="javascript:;" class="login-tip">会员登录</a>
+        </div>
+    </div>
+    <div class="side-center">
+        <span class="side-car-number">1</span>
+        <div class="sp_car"></div>
+        <p>购物车</p>
+    </div>
+    <div class="side-bottom">
+        <div class="qq">
+            <img src="images/qq.jpg" width="30" height="30" style="border-radius: 50%" alt="">
+        </div>
+        <div class="sc-return-top">
+            <div class="sc-to-top"></div>
+            <a href="javascript:;" class="sc-top-tip">返回顶部</a>
+        </div>
+    </div>
+    <!--侧边栏登陆-->
+    <div class="side-login">
+        <a href="javascript:;" class="close_btn">X</a>
+        <span></span>
+        <form id="my_form">
+            <div>
+                <span>没有账号?</span>
+                <a href="register.html" target="_blank">免费注册</a>
+            </div>
+            <div>
+                <div class="usbg">
+
+                </div>
+                <input type="text" placeholder="用户名/手机/邮箱" name="loadingname" class="login">
+            </div>
+            <div>
+                <div class="pwbg">
+
+                </div>
+                <input type="text" placeholder="密码" name="pwd">
+            </div>
+            <div>
+                <div class="yzmbg">
+
+                </div>
+                <input type="text" placeholder="请输入验证码" class="yzmbox">
+                <span class="yzm"></span>
+            </div>
+            <a href="#">忘记密码?</a><br>
+            <input type="button" value="登&nbsp;&nbsp;陆" class="btn">
+        </form>
+    </div>
+    <!--侧边栏购物车-->
+    <div class="side-shoppingcar-wrp">
+        <div class="side-shoppingcar">
+            <div class="sc-top">
+                我的购物车
+                <span class="hide-sc"></span>
+            </div>
+            <div class="sc-center">
+                <div class="sc-empty">购物车空空如也!</div>
+                <ul class="side-car-box">
+                    <!--<li>-->
+                    <!--<a href="javascript:;">-->
+                    <!--<img class="sc-img" src="image_shopping/img2/listhot01.png" alt="">-->
+                    <!--</a>-->
+                    <!--<div>-->
+                    <!--<a href="javascript:;" class="sc-name">瑞肯橱柜 榻榻米 白色 平方</a>-->
+                    <!--<p><span class="sc-money">￥198.00</span>x<span class="sc-count">1</span></p>-->
+                    <!--</div>-->
+                    <!--<a class="sc-remove" href="javascript:;">X</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="sc-bottom">
+                <p>共计金额:<span class="sc-count-all">￥399.00</span></p>
+                <a href="car.html">结算购物车中的商品</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+<script>
+
+    $(function () {
+        var pid = window.location.search.split('=')[1];
+
+
+
+        //加载数据
+
+
+
+       // console.log(pid);
+        $.ajax({
+            url: "./servers/weiwei/listInfo.php?proId=" + pid,
+            type: "get",
+            dataType: "json",
+            success: function (res) {
+                console.log(res);
+                $(".proname").html(res[0].proname);
+                $(".bigImg").attr("src",res[0].proimgbig);
+                $(".litterimg").css("background",'url("./'+res[0].proimgbig+'") center').css("background-size","cover")
+                $(".smallImg").css("background",'url("./'+res[0].proimgbig+'") center').css("background-size","cover")
+                $(".oldproprice").html(res[0].oldproprice);
+                $(".proprice").html(res[0].proprice);
+                $(".prostore").html(res[0].prostore);
+
+                var mylazy=res[0].prolazy.split(",");
+                var myhot=res[0].prohot.split(",");
+                var mysave=res[0].prosave.split(",");
+                for(var i=0;i<mylazy.length;i++)
+                {
+                    var templazy='<img class="lazy123" data-original="image_shopping/img'+pid+'/'+mylazy[i]+'" alt="图片加载中.......">'
+                    $(".prolazy").html($(".prolazy").html()+templazy);
+                }
+                for(var j=0;j<$(".listhot").length;j++)
+                {
+                    $(".listhot").eq(j).attr("src","image_shopping/img"+pid+"/"+myhot[j]);
+                }
+                for(var k=0;k<$(".listsave").length;k++)
+                {
+                    $(".listsave").eq(k).attr("src","image_shopping/img"+pid+"/"+mysave[k]);
+                }
+
+
+                $(".addcart").data("proid",res[0].proid)
+                $(".addcart").data("proimg",res[0].proimg)
+                $(".addcart").data("proprice",res[0].proprice)
+                $(".addcart").data("proname",res[0].proname)
+
+            }
+        })
+
+        //懒加载
+var lazyLimitarray=[];
+        window.onscroll=function () {
+            if($(document).scrollTop()>=$(".img-show").offset().top-50){
+                if(lazyLimitarray.indexOf($(this).index())==-1)
+                {
+                    $(".lazy123").lazyload({
+                        placeholder : "image_shopping/img1/timg.jpg", //用图片提前占位
+                        // placeholder,值为某一图片路径.此图片用来占据将要加载的图片的位置,待图片加载时,占位图则会隐藏
+                        effect: "slideDown", // 载入使用何种效果
+                        // effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等,常用fadeIn
+                        threshold: 200, // 提前开始加载
+                        // threshold,值为数字,代表页面高度.如设置为200,表示滚动条在离目标位置还有200的高度时就开始加载图片,可以做到不让用户察觉
+                        event: 'click',  // 事件触发时才加载
+                        // event,值有click(点击),mouseover(鼠标划过),sporty(运动的),foobar(…).可以实现鼠标莫过或点击图片才开始加载,后两个值未测试…
+                        container: $(".prolazy"),  // 对某容器中的图片实现效果
+                        // container,值为某容器.lazyload默认在拉动浏览器滚动条时生效,这个参数可以让你在拉动某DIV的滚动条时依次加载其中的图片
+                        failurelimit : 20 // 图片排序混乱时
+                        // failurelimit,值为数字.lazyload默认在找到第一张不在可见区域里的图片时则不再继续加载,但当HTML容器混乱的时候可能出现可见区域内图片并没加载出来的情况,failurelimit意在加载N张可见区域外的图片,以避免出现这个问题.
+                    });
+                }
+                lazyLimitarray.push($(this).index());
+            }
+
+        }
+
+
+//添加购物车
+        $(".addcart").on("click", function () {
+            console.log($(this).data("proid"));
+
+            //假装我从 cookie中取到了当前登录的id的值
+            if(getCookie("login")==null)
+            {
+                window.location.href="loading.html"
+            }
+            else
+            {
+                // var userID=document.cookie...
+                var userId =getCookie("login");
+                console.log(userId)
+                console.log(parseInt(getCookie("login")))
+                $.ajax({
+                    url: "./servers/weiwei/addCart.php",
+                    data: {
+                        "proid": $(this).data("proid"),
+                        "proimg": $(this).data("proimg"),
+                        "proprice": $(this).data("proprice"),
+                        "proname": $(this).data("proname"),
+                        "carnumber":parseInt($(".carnumber").val()),
+                        "userId": userId,
+                    },
+                    type:"POST",
+                    success:function () {
+                        // window.location.href="cartlist.html
+
+                        $.ajax({
+                            url: "./servers/weiwei/cartlist.php?uId="+userId,
+                            type: "get",
+                            success: function (res) {
+                                var arr=JSON.parse(res);
+                                console.log(arr);
+                                console.log(arr.length);
+                                $(".spbox .empty").hide();
+                                $(".sc-empty").hide();
+                                var money=0;
+                                var sidemoney=0;
+                                $(".gouwuche_box").html("")
+                                $(".side-car-box").html("")
+                                for(var i=0;i<arr.length;i++) {
+                                    var tempstr='<li>'
+                                    tempstr+='<a href="javasacript:;"><img src="'+arr[i].proimg+'" alt=""></a>'
+                                    tempstr+='<a href="javasacript:;">'+arr[i].proname+'</a>'
+                                    tempstr+='<span>'+arr[i].proprice+'x'+arr[i].carnumber+'</span>'
+                                    tempstr+='<a href="javasacript:;" class="deletecar" onclick="delet(this)" data-cartid="'+arr[i].carid+'" data-money="'+parseFloat(arr[i].proprice.split("￥")[1])*arr[i].carnumber+'">删除</a>'
+                                    tempstr+=   '</li>'
+                                    $(".gouwuche_box").html($(".gouwuche_box").html()+tempstr)
+                                    money+=parseFloat(arr[i].proprice.split("￥")[1])*arr[i].carnumber;
+
+                                }
+
+                                //侧边购物车
+
+                                for(var j=0;j<arr.length;j++)
+                                {
+                                    var sidestr='<li>'
+                                    sidestr+='<a href="javascript:;">'
+                                    sidestr+='<img class="sc-img" src="'+arr[j].proimg+'" alt="">'
+                                    sidestr+='</a>'
+                                    sidestr+='<div>'
+                                    sidestr+='<a href="javascript:;" class="sc-name">'+arr[j].proname+'</a>'
+                                    sidestr+='<p><span class="sc-money">'+arr[j].proprice+'</span>x<span class="sc-count">'+arr[j].carnumber+'</span></p>'
+                                    sidestr+='</div>'
+                                    sidestr+='<a class="sc-remove" href="javascript:;" class="deleteside-car" onclick="deletside(this)" data-cartid="'+arr[j].carid+'" data-money="'+parseFloat(arr[j].proprice.split("￥")[1])*arr[j].carnumber+'">X</a>'
+                                    sidestr+='</li>'
+                                    $(".side-car-box").html( $(".side-car-box").html()+sidestr);
+                                    sidemoney+=parseFloat(arr[j].proprice.split("￥")[1])*arr[j].carnumber;
+
+
+                                }
+
+                                if(arr.length>0)
+                                {
+                                    $(".status_number").show().html(arr.length);
+                                    $(".shopping-status .kinds").html(arr.length);
+
+                                    //侧边栏购物车
+                                    $(".sc-empty").hide();
+                                    $(".sc-count-all").html("￥"+sidemoney.toFixed(2));
+                                    $(".side-car-number").show().html(arr.length);
+
+                                    $(".gouwukinds").html(arr.length)
+                                    $(".countmoney").html("￥"+money.toFixed(2));
+                                    $(".shopping-status .count-money").html("￥"+money.toFixed(2));
+                                }
+                                else
+                                {
+                                    $(".status_number").hide().html("0");
+                                    //侧边栏购物车
+                                    $(".sc-empty").show();
+                                    $(".sc-count-all").html("￥0");
+                                    $(".side-car-number").hide();
+                                }
+                                console.log(tempstr);
+
+
+
+                            }
+                        })
+
+                        $(".shopping-status").css("display","flex");
+
+                    }
+                })
+            }
+
+
+            //把当前的购车信息添加到购物车表
+
+        })
+
+
+        //点击继续购物隐藏提示信息框
+        $(".shopping-status>div>a").eq(1).on("click",function () {
+            $(".shopping-status").hide();
+        })
+        $(".shopping-status>a").eq(0).on("click",function () {
+            $(".shopping-status").hide();
+        })
+
+        //立即购买
+        $(".spbtn").click(function () {
+            window.location.href="car.html";
+        })
+
+        $(".increase").on("click",function () {
+
+            //先获取自己的已有的值，再加1，又塞回去
+            $(".carnumber").val(parseInt($(".carnumber").val())+1)
+
+        })
+        // jianjian
+
+        $(".decrease").on("click",function () {
+
+            //先获取自己的已有的值，再加1，又塞回去
+            if(parseInt($(".carnumber").val())==1){
+
+//                $(this).closest("tr").remove();//自生自灭
+                return ;
+            }
+            $(".carnumber").val(parseInt($(".carnumber").val())-1)
+
+        })
+
+
+
+
+    })
+
+    //删除商品
+    function delet(temp) {
+        console.log($(temp).data("money"));
+
+        $.ajax({
+            url: "./servers/weiwei/cartDelete.php",
+            type: "post",
+            data: {"cartId": $(temp).data("cartid")}, //服务器需要一个di，根据id删除
+            success: function (res) {
+                console.log(res);
+                if (JSON.parse(res).status == 1) {
+//                    alert(JSON.parse(res).msg)
+                    var idx=$(temp).closest("li").index()
+                    $(temp).closest("li").remove();//自生自灭
+                    // console.log($(temp).index());
+                    $(".side-car-box li").eq(idx).remove();
+                }
+
+                if ($(".gouwuche_box li").length > 0) {
+                    $(".status_number").show().html($(".gouwuche_box li").length);
+                    $(".gouwukinds").html($(".gouwuche_box li").length)
+                    $(".countmoney").html("￥" + (parseFloat($(".countmoney").html().split("￥")[1]) - $(temp).data("money")).toFixed(2));
+
+                    $(".side-car-number").show().html($(".gouwuche_box li").length);
+                    // $(".gouwukinds").html($(".gouwuche_box li").length)
+                    $(".sc-count-all").html("￥"+(parseFloat($(".sc-count-all").html().split("￥")[1])-$(temp).data("money")).toFixed(2));
+
+                }
+                else {
+                    $(".status_number").hide().html("0");
+                    $(".spbox .empty").show();
+                    $(".gouwukinds").html("0");
+                    $(".countmoney").html("￥0");
+
+                    $(".side-car-number").hide().html("0");
+                    $(".sc-empty").show();
+                    // $(".gouwukinds").html("0");
+                    $(".sc-count-all").html("￥0");
+                }
+
+            }
+
+
+        })
+    }
+    //console.log(temp);
+
+
+
+    //        侧边栏删除商品
+    //删除商品
+    function deletside(temp) {
+        console.log($(temp).data("money"));
+
+        $.ajax({
+            url:"./servers/weiwei/cartDelete.php",
+            type:"post",
+            data:{"cartId":$(temp).data("cartid")}, //服务器需要一个di，根据id删除
+            success:function (res) {
+                console.log(res);
+                if(JSON.parse(res).status==1){
+//                    alert(JSON.parse(res).msg)
+                    var idx=$(temp).closest("li").index()
+                    $(temp).closest("li").remove();//自生自灭
+
+                    $(".spbox li").eq(idx).remove();
+                }
+
+                if($(".side-car-box li").length>0)
+                {
+                    $(".side-car-number").show().html($(".side-car-box li").length);
+                    // $(".gouwukinds").html($(".gouwuche_box li").length)
+                    $(".sc-count-all").html("￥"+(parseFloat($(".sc-count-all").html().split("￥")[1])-$(temp).data("money")).toFixed(2));
+
+                    $(".status_number").show().html($(".side-car-box li").length);
+                    $(".gouwukinds").html($(".side-car-box li").length)
+                    $(".countmoney").html("￥" + (parseFloat($(".countmoney").html().split("￥")[1]) - $(temp).data("money")).toFixed(2));
+                }
+                else
+                {
+                    $(".side-car-number").hide().html("0");
+                    $(".sc-empty").show();
+                    // $(".gouwukinds").html("0");
+                    $(".sc-count-all").html("￥0");
+
+                    $(".status_number").hide().html("0");
+                    $(".spbox .empty").show();
+                    $(".gouwukinds").html("0");
+                    $(".countmoney").html("￥0");
+                }
+
+            }
+
+
+        })
+
+
+    }
+
+
+
+
+</script>

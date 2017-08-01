@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title></title>
+
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/main.css">-->
+    <link rel="stylesheet" href="CSS/animate.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <script src="js/Troke.MyCookie.js"></script>
+
+    <style>
+        body{
+            background:white;
+        }
+        .welcome{
+            color:orangered;
+            font-size: 24px;
+        }
+        .or-tb-color{
+            color: orange;
+            font-size: 16px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="alert alert-success userName" role="alert">
+        <div class="animated bounceInDown welcome" id="hepai">欢迎来到购物车</div>
+    </div>
+</div>
+
+
+<!--
+
+-->
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>预览</th>
+            <th>商品</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="tab">
+
+
+
+        </tbody>
+    </table>
+
+
+    <div  style="" class="alert alert-success navbar-fixed-bottom container" >
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10"></div>
+                <div class="col-lg-2 col-md-2 col-sm-2 ">
+                    <button type="button" class="btn btn-primary btn-lg btn-count" data-toggle="modal" data-target="#myModal">
+                        立即支付
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">结算</h4>
+                </div>
+                <div class="modal-body">
+                    是否立即支付？共花费<span class="AllMoney"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary btn-pay">支付</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
+
+<script>
+    $(function () {
+            if(getCookie("login")==null)
+            {
+                return false;
+            }
+            $(".welcome").html("尊敬的:"+getCookie("login")+"用户您好!").css("color","orange")
+
+        $.ajax({
+            url:"./servers/weiwei/cartlist.php?uId="+getCookie("login"),
+            type:"get",
+            success:function (res) {
+                var index=1;
+                var arr=JSON.parse(res);
+                for(var i=0;i<arr.length;i++){
+
+                    var tmpHTML='<tr>';
+                    tmpHTML+='<th scope="row"><img src="'+arr[i].proimg+'" alt="" width="40" height="40"></th>';
+                    tmpHTML+='<td class="animated shake" style="display:table-cell; vertical-align:middle">'+arr[i].proname+'</td>';
+                    tmpHTML+='<td class="animated bounce or-tb-color" style="display:table-cell; vertical-align:middle">'+arr[i].proprice+'</td>';
+                    tmpHTML+='<td style="display:table-cell; vertical-align:middle">';
+                    tmpHTML+='<div class="btn btn-danger btn-xs jianjian">-</div>';
+                    tmpHTML+='<input type="text" style="width: 30px" value="'+arr[i].carnumber+'"/>';
+                    tmpHTML+='<div class="btn btn-danger btn-xs jiajia" >+</div>';
+                    tmpHTML+='</td>';
+                    tmpHTML+='<td class="countMoney animated bounce or-tb-color" style="display:table-cell; vertical-align:middle">￥'+(arr[i].carnumber*parseFloat(arr[i].proprice.split("￥")[1])).toFixed(2)+'</td>';
+                    tmpHTML+='<td style="display:table-cell; vertical-align:middle">';
+                    tmpHTML+='<div class="btn btn-link  btn-xs deleteCart" data-cartid="'+arr[i].carid+'" >删除</div>';
+                    tmpHTML+='</td>';
+                    tmpHTML+='</tr>';
+
+                    $("#tab").html($("#tab").html()+tmpHTML);
+                    index++;
+                }
+
+            }
+        })
+
+
+
+        $("table").on("click",".jiajia",function () {
+
+            //先获取自己的已有的值，再加1，又塞回去
+            $(this).prev().val(parseInt($(this).prev().val())+1)
+            var danjia=parseFloat($(this).closest("td").prev().html().split("￥")[1]);
+            var predentMoney=parseFloat($(this).closest("td").next().html().split("￥")[1]);
+            $(this).closest("td").next().html("￥"+(predentMoney+danjia).toFixed(2));
+        })
+        // jianjian
+
+        $("table").on("click",".jianjian",function () {
+
+            //先获取自己的已有的值，再加1，又塞回去
+            if(parseInt($(this).next().val())==0){
+
+                $(this).closest("tr").remove();//自生自灭
+                return ;
+            }
+            $(this).next().val(parseInt($(this).next().val())-1)
+            var danjia=parseFloat($(this).closest("td").prev().html().split("￥")[1]);
+            var predentMoney=parseFloat($(this).closest("td").next().html().split("￥")[1]);
+            $(this).closest("td").next().html("￥"+(predentMoney-danjia).toFixed(2));
+
+
+        })
+
+        $("table").on("click",".deleteCart",function () {
+            console.log($(this).data("cartid"));
+            // 通过ID，去对应表中删除记录  //  cartId
+            var salf=this;
+
+            $.ajax({
+                url:"./servers/weiwei/cartDelete.php",
+                type:"post",
+                data:{"cartId":$(this).data("cartid")}, //服务器需要一个di，根据id删除
+                success:function (res) {
+
+                    if(JSON.parse(res).status==1){
+//                        alert(JSON.parse(res).msg)
+                        $(salf).closest("tr").remove();//自生自灭
+                    }
+
+                }
+            })
+
+
+        })
+
+        $(".btn-pay").on("click",function () {
+            $("#myModal").hide();
+            $(".modal-backdrop").hide();
+            $.ajax({
+                url:"./servers/weiwei/cleanCar.php",
+                type:"post",
+                data:{"userId":getCookie("login")}, //服务器需要一个di，根据id删除
+                success:function (res) {
+
+
+                }
+            })
+            window.location.href="index.html"
+        })
+
+        $(".btn-count").on("click",function () {
+            var count=0;
+            console.log(count);
+            for(var i=0;i<$(".countMoney").length;i++)
+            {
+                count+=parseFloat($(".countMoney").eq(i).html().split("￥")[1]);
+                console.log(count);
+            }
+            count=count.toFixed(2);
+            console.log(count);
+            $(".AllMoney").text("￥"+count);
+        })
+
+    })
+</script>

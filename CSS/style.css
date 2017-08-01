@@ -1,0 +1,379 @@
+
+.searchbottom .band .menu{
+    width: 213px;
+    height: 400px;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    z-index: 15;
+    left:0px;top:43px;
+}
+.band .menu dl{
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 22px;
+    border-bottom: 1px solid black;
+
+}
+.band .menu dl dt a{
+    color: orange;
+}
+.band .menu dl dd{
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+.band .menu dl dd a{
+    margin-right: 6px;
+}
+.band .menu dl dd a:hover{color: orange}
+
+
+/*轮播图*/
+.banner-wrp{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border-top:2px solid black;
+}
+.origin-color{background: #8c8c8c;}
+.orange-color{background: orangered}
+.banner-wrp .banner{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner ul{
+    height: 400px;
+
+}
+
+.banner ul li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.banner ul li a img{
+    width: 100%;
+    height:400px;
+}
+.banner #link{
+    width: 160px;
+    height: 10px;
+    position: absolute;
+    z-index: 10;
+    left: 700px;
+    bottom: 30px;
+
+}
+#link span{
+    display: inline-block;margin-left: 5px;
+    height: 10px;
+    width: 30px;
+
+}
+
+
+/*商品展示列表*/
+#bandwrp{
+    width: 100%;
+    height: 290px;
+}
+#bandwrp .bandshow{
+    width: 1200px;
+    height: 290px;
+    margin:0 auto;
+}
+
+.bandshow .bd-left{
+    width: 990px;
+    height: 290px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.bd-left .title{
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #ccc;
+    box-sizing: border-box;
+}
+.bd-left .title a{
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    position: relative;
+    color: black;
+}
+.ahover{
+    border-bottom:2px solid orangered;
+    color:white;
+}
+.title a .iconfont{
+    color: orangered;
+    display: none;
+    position: absolute;
+    bottom: -20px;
+    left: 94px;
+}
+.bandlist{
+    height: 250px;
+    width: 990px;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.bandlist ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.bandlist ul li{
+    height: 210px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bandlist ul li>a{color:black}
+.bandlist ul li>a:hover{color:orange}
+.bandlist ul li>p>span{color: orange;font-size: 14px}
+.bandlist ul li>a>img{
+    width: 160px;
+    height: 160px;
+}
+
+.bandshow .bd-right{
+    display: inline-block;
+    width: 190px;
+    height: 280px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+.bd-right .bd-r-top{
+    height: 38px;
+    width: 188px;
+    border: 1px solid #ccccee;
+    line-height: 38px;
+    text-indent: 10px;
+    font-weight: 700;
+}
+.bd-right .bd-r-center{
+    height: 120px;
+    width: 190px;
+    border: 1px solid #ccccee;
+    border-top:none;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.bd-r-center ul{
+
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.bd-r-center ul li{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin:6px 0;
+
+}
+.bd-r-center ul li a{color: black}
+.bd-r-center ul li a:hover{color: orange}
+.bandshow .bd-bg{
+    width: 190px;
+    height: 110px;
+    display: block;
+    margin-top: 10px;
+}
+.bd-bg img{
+    width: 100%;
+    height: 100%;
+}
+
+/*店铺推荐*/
+#brand-wrp{
+    width: 100%;
+    height: 424px;
+}
+#brand-wrp .brand{
+    width: 1200px;
+    height: 423px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+}
+.brand h1{
+    width: 1200px;
+    height: 64px;
+    line-height: 64px;
+    background: url("../images/brandbg.jpg") no-repeat 120px center;
+}
+.brand ul{
+    display: flex;
+    width: 1200px;
+    flex-wrap: wrap;
+}
+
+
+/*楼层信息*/
+#floor-wrp{
+    width: 100%;
+    height: 89px;
+    background: white;
+    z-index: 100;
+}
+#floor-wrp .floormsg{
+    width: 1200px;
+    height: 88px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+    line-height: 88px;
+}
+.floormsg>span{
+    display:inline-block;
+    padding: 0 30px 0 10px;
+    color: orange;
+    border-right: 1px solid #ccc;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-right: 25px;
+}
+.floormsg>a{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.floormsg>a.bk_color{
+    background: white;
+    color: black;
+}
+.floormsg>a.or_color{
+    background: orange;
+    color: white;
+}
+
+/*一楼*/
+#first_floor_wrp,
+#second_floor_wrp,
+#third_floor_wrp{
+    width: 100%;
+    height: 581px;
+}
+#first_floor_wrp .first_floor,
+#second_floor_wrp .second_floor,
+#third_floor_wrp .third_floor{
+    width: 1200px;
+    height: 581px;
+    margin: 0 auto;
+}
+.first_floor .msg,
+.second_floor .msg,
+.third_floor .msg{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid deepskyblue;
+    box-sizing: border-box;
+}
+.second_floor .msg{
+    border-bottom: 1px solid mediumvioletred;
+}
+
+.first_floor .msg span:nth-of-type(1),
+.second_floor .msg span:nth-of-type(1),
+.third_floor .msg span:nth-of-type(1){
+    display: inline-block;
+    width: 130px;
+    height: 100%;
+    border-bottom: 2px solid deepskyblue;
+    box-sizing: border-box;
+    line-height: 77px;
+    font-size: 24px;
+    text-align: center;
+}
+.second_floor .msg span:nth-of-type(1){
+    border-bottom: 2px solid mediumvioletred;
+}
+.first_floor .msg span:nth-of-type(2),
+.second_floor .msg span:nth-of-type(2),
+.third_floor .msg span:nth-of-type(2){
+    display: inline-block;
+    float: right;
+    width: 400px;
+    height: 100%;
+    box-sizing: border-box;
+    line-height: 12px;
+    font-size: 12px;
+    text-align: right;
+    padding-top: 50px;
+    padding-right: 15px;
+}
+
+.first_floor .msg span:nth-of-type(2) a,
+.second_floor .msg span:nth-of-type(2) a,
+.third_floor .msg span:nth-of-type(2) a{color:black}
+
+.first_floor .msg span:nth-of-type(2) a:hover,
+.second_floor .msg span:nth-of-type(2) a:hover,
+.third_floor .msg span:nth-of-type(2) a:hover{color:orange}
+.first_floor>ul,
+.second_floor>ul,
+.third_floor>ul{
+    width: 1200px;
+    height: 500px;
+    border-bottom: 1px solid #ccc;
+}
+.first_floor>ul>li,
+.second_floor>ul>li,
+.third_floor>ul>li{
+    float: left;
+}
+.first_floor>ul>li:nth-of-type(2),
+.second_floor>ul>li:nth-of-type(2),
+.third_floor>ul>li:nth-of-type(2){
+    width: 500px;
+    height: 500px;
+
+}
+.first_floor>ul>li:nth-of-type(2)>div:nth-of-type(1),
+.second_floor>ul>li:nth-of-type(2)>div:nth-of-type(1),
+.third_floor>ul>li:nth-of-type(2)>div:nth-of-type(1){
+    width: 500px;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+.first_floor>ul>li:nth-of-type(2)>div:nth-of-type(2),
+.second_floor>ul>li:nth-of-type(2)>div:nth-of-type(2),
+.third_floor>ul>li:nth-of-type(2)>div:nth-of-type(2){
+    height: 180px;display: flex;
+}
+.animate_brand_2,.animate_brand,.animate_brand_3{
+    width: 1000px;
+    height: 320px;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 3;
+}
+.animate_brand_2 li,.animate_brand li,.animate_brand_3 li{
+    float: left;
+}
+
+

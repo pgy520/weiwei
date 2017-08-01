@@ -1,0 +1,1 @@
+/** * Created by tronke on 2017/5/18. */   $.fn.myColor=function (color) {       this.css("background-color",color);       return this;   }
